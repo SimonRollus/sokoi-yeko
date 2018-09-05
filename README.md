@@ -1,2 +1,6 @@
 # sokoi-yeko
-For now, it's just a demonstration of my CSS/HTML/PHP skills.
+For now, it's just a demonstration of my HTML/CSS/PHP skills.
+
+
+
+  
