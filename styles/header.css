@@ -1,0 +1,148 @@
+/* Header */
+
+header {
+  grid-area: h;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header .logo {
+  display: inline-block;
+  font-family: "Molot";
+  font-size: 3.5rem;
+}
+
+header .logo p {
+  margin: 0;
+  letter-spacing: -1vw;
+}
+
+header .logo p span {
+  /*margin-right: -1.8vw;*/
+}
+
+header .logo p span:nth-child(1) {
+  color: var(--green);
+}
+
+header .logo span:nth-child(2) {
+  color: var(--blue);
+}
+
+header .logo p span:nth-child(3) {
+  color: var(--red);
+}
+
+header .logo p span:nth-child(4) {
+  color: var(--yellow);
+}
+
+header .menu {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Molot";
+  font-size: 1.75rem;
+  list-style: none;
+}
+
+header .menu li {
+  transition: 0.2s font-size;
+  transition: 0.3s font-size;
+}
+
+header .menu li:hover {
+  font-size: 2.25rem;
+  cursor: pointer;
+}
+
+header .menu li:nth-child(1):hover {
+  color: var(--red);
+  text-shadow: -5px 0px 0 hsl(359, 73%, 35%);
+}
+header .menu li:nth-child(2):hover {
+  color: var(--blue);
+  text-shadow: -5px 0px 0 hsl(197, 100%, 33%);
+}
+header .menu li:nth-child(3):hover {
+  color: var(--yellow);
+  text-shadow: 5px 0px 0 hsl(41, 97%, 37%);
+}
+header .menu li:nth-child(4):hover {
+  color: var(--green);
+  text-shadow: 5px 0px 0 hsl(106, 46%, 41%);
+}
+
+header .sign {
+  font-size: 1rem;
+}
+
+header .sign a {
+  color: black;
+  text-decoration: none;
+}
+
+header .sign a:hover {
+  color: var(--blue);
+}
+header .gear {
+  font-size: 1.5rem;
+  color: gray;
+  cursor: pointer;
+}
+
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header .options {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position:absolute;
+  top:10vh; left:88.25vw;
+  height:100px; width:100px;
+  background-color:#FFF;
+  box-shadow:rgba(0,0,0, 0.2) 0px 1px 3px;
+  border-radius:3px;
+  animation-iteration-count: infinite;
+  list-style: none;
+}
+header .options:before {
+  position:absolute;
+  top: -10px; right:10px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  z-index:2;
+}
+header .options:after {
+  /* This is the shadow triangle */
+  position:absolute;
+  top: -12px; right:8px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid rgba(0,0,0, 0.03);
+  z-index:1;
+}
+
+header .options li:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
